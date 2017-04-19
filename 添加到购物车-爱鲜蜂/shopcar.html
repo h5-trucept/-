@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<ul id="shopList"></ul>
+	</body>
+	<script src="js/jquery-1.10.2.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function(){
+			var arr = JSON.parse(localStorage.getItem('goods2'));
+			console.log(arr);
+			for (var i = 0; i < arr.length; i++) {
+				var liObj = $('<li><p></p><p></p></li>');
+				liObj.find('p').eq(0).text(arr[i].name);
+				liObj.find('p').eq(1).text(arr[i].num);
+				$('#shopList').append(liObj);
+			}
+		})
+	</script>
+</html>

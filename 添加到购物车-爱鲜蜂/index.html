@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title></title>
+</head>
+<body>
+	<ul id="list"></ul>
+</body>
+<script src="js/jquery-1.10.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	$(function(){
+		$.getJSON('json/4.json',function(res){
+			initData(res);
+		})
+		function initData(arr){
+			for (var i = 0; i < arr.length; i++) {
+				var obj = arr[i];
+				var liObj = $('<li><p></p><a href="javascript:void(0)">+</a><a href="javascript:void(0)">-</a></li>');
+				liObj.find('p').text(obj.name);
+				$('#list').append(liObj);
+				
+				(function(obj1){
+					liObj.find('a').eq(0).on('click',function(){
+						var local = localStorage.getItem('goods2');
+						if(local){
+							var arr = JSON.parse(local);
+							var isHas = false;
+							//判断这个数据是否已经存过,如果存过就num++,
+							for (var i = 0; i < arr.length; i++) {
+								if (arr[i].name == obj1.name) {
+									arr[i].num++;
+									isHas = true;
+								}
+							}
+							if (!isHas) {
+								obj1.num = 1;
+								arr.push(obj1);
+							}
+							localStorage.setItem('goods2',JSON.stringify(arr));
+						}else{
+							obj1.num = 1;
+							var arr1 = [obj1];
+							localStorage.setItem('goods2',JSON.stringify(arr1));
+						}
+					});
+					//减号
+					liObj.find('a').eq(1).on('click',function(){
+						var local = localStorage.getItem('goods2');
+						var arr = JSON.parse(local);
+						for (var i = 0; i < arr.length; i++) {
+							if (arr[i].name == obj1.name) {
+								arr[i].num--;
+								if (arr[i].num == 0) {
+									arr.splice(i,1);
+								}
+							}
+						}
+						localStorage.setItem('goods2',JSON.stringify(arr));
+					});
+				})(obj)
+			}
+		}
+	})
+</script>
+</html>

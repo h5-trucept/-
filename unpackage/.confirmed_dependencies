@@ -1,0 +1,26 @@
+{
+	"index.html": {
+		"resources": [
+			"css/index.css",
+			"css/swiper-3.4.2.min-1.css",
+			"js/libs/backbone.js",
+			"css/com.css",
+			"js/libs/jquery.js",
+			"js/requirejs.js",
+			"font/font-awesome-4.7.0/css/font-awesome.css",
+			"font/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2",
+			"js/zepto.js",
+			"css/animated.css",
+			"js/libs/underscore.js",
+			"app.js",
+			"js/index.js",
+			"com/home/home.css",
+			"js/libs/text.js",
+			"com/home/home.js",
+			"json/home.json",
+			"js/swiper-3.4.2.jquery.min.js",
+			"js/libs/css.js",
+			"com/home/home.html"
+		]
+	}
+}

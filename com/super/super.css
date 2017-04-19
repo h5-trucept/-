@@ -1,0 +1,185 @@
+.n2-list{
+    width: 23%;
+    height: 100%;
+    float: left;
+    overflow: auto;
+}
+
+.n2-list>li{
+    width: 100%;
+    height: 11%;
+    overflow: auto;
+    background: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px #e0e0e0 solid;
+    position: relative;
+}
+.n2-list>li:nth-of-type(1){
+    border-left: 4px solid yellow;
+}
+.n2-list>li img{
+   position: absolute;
+    right: 0;
+    top: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+.n2-tolist{
+    width:77%;
+    height: 11%;
+    border: 1px #e0e0e0 solid;
+    display: table;
+    text-align: center;
+    background: #fff;
+    position: relative;
+}
+.n2-tolist>li{
+    width:50% ;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+}
+.lbb_t{
+    width:77%;
+    position: absolute;
+    background: #fff;
+    left: 23%;;
+    top: 11%;
+    z-index: 999;
+    display: none;
+    padding-bottom: .5rem;
+}
+.lbb_t>li{
+    float: left;
+    border: solid 1px #e0e0e0;
+    padding: .4rem .4rem;
+    margin-left: .8rem;
+    margin-top: .8rem;
+    border-radius: .5rem;
+    background-color: #fff;
+}
+.menu_shop{
+    width:77%;
+    height: 89%;
+    overflow: auto;
+    margin-left: 23%;
+    background: #fff;
+    position: relative;
+
+}
+.showstat{
+    left: 0;
+    top:11%;
+    width:77%;
+    height: 89%;
+    margin-left: 23%;
+    background: rgba(0,0,0,.2);
+    z-index: 9;
+    position:absolute;
+}
+
+.menu_shop li{
+    width: 100%;
+    height: 28%;
+    position: relative;
+    display: flex;
+    padding: 4.2rem 0;
+    align-items: center;
+    justify-content: center;
+    border-bottom:1px solid #aaa;
+}
+.menu_shop img{
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    border-radius: 50%;
+    left: 0;/
+}
+.v_menu{
+    position: absolute;
+    left: 40%;
+    padding-left: .1rem;
+    display: flex;
+    width: 60%;
+    flex-direction: column;
+    justify-content: flex-start;
+    line-height: 200%;
+    font-size: .9rem;
+}
+.v_menu h3{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 80%;
+}
+.v_menu h4{
+    font-weight: normal;
+}
+.v_menu h4 span{
+    border: 2px red solid;
+    border-radius:.5rem;
+    color: red;
+    padding: .1rem;
+}
+.v_menu h4 i{
+    padding: .1rem;
+    color: #fff;
+    background: red;
+    margin-left: 1rem;
+    border: 2px red solid;
+    border-radius:.5rem;
+}
+.v_menu h5{
+    color: #aaa;
+    font-weight: normal;
+}
+.v_menu p i{
+    color: red;
+}
+.v_menu p em{
+    text-decoration: line-through;
+    margin-left: .3rem;
+}
+.v_menu code{
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    border:1px solid red;
+    border-radius: 50%;
+    line-height: 2rem;
+    text-align: center;
+    padding-right: .1rem;
+    font-size: 1.5rem;
+    text-shadow: 0 0 .1rem red;
+    font-weight: bold;
+    color: red;
+    position: absolute;
+    z-index: 9;
+    right: .5rem;
+    bottom: .5rem;
+}
+.v_menu .price_num{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: .3rem;
+    bottom: .3rem;
+}
+.v_menu .price_num span{
+   margin: 0 .3rem;
+}
+.v_menu .price_num code{
+    position: static;
+    display: inline-block;
+}
+.cl_img{
+    animation:play 1s paused;
+    z-index: 999;
+    position: absolute;
+}
+@keyframes  play{
+    0%{left:0;top:0;transform: scale(1)}
+    100%{left:5rem;top:30rem;transform: scale(.2)}
+}

@@ -1,0 +1,9 @@
+html,body{width: 100%;height:100%}
+.box{position: relative;width: 100%;height: 100%;font-size: 1rem;}
+.fixed{text-align: center;width: 100%;height: 10%; display: flex; align-items: center;justify-content: center; position: fixed;z-index:999; background: #ffd600;top:0}
+.fixed_x{position: absolute;right:1rem;}
+.fixed_x span{display: block}
+.main {position: relative; top:10%; width: 100%; height: 80%; overflow:auto; background: #efefef;}
+.foot_nav{width: 100%;height: 10%;background: #f7f7f7;  z-index:999;position: fixed;bottom:0}
+.foot_nav ul{height: 100%;display: flex; align-items: center;justify-content: space-around;text-align: center}
+.foot_nav ul li p{display: block!important;}

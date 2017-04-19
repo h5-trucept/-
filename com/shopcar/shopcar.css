@@ -1,0 +1,49 @@
+.car{
+    height:10%;
+    background: deeppink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.list li{
+    height: 8rem;
+    padding-top: .5rem;
+    background: #fff;
+    position: relative;
+    border-bottom: 1px #aaaaaa solid;
+}
+.list li img{
+    float: left;
+    height: 80%;
+}
+.list li p{
+    width: 50%;
+    margin-bottom: 1rem;
+}
+.list li b{
+    margin: 0 0.3rem;
+    margin-top:.4rem;
+}
+.pan{
+    position: absolute;
+    right: 0;
+    bottom:.4rem;
+}
+.list li code{
+    /*display: block;*/
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    border:1px solid red;
+    border-radius: 50%;
+    line-height: 2rem;
+    text-align: center;
+    padding-right: .1rem;
+    font-size: 1.5rem;
+    text-shadow: 0 0 .1rem red;
+    font-weight: bold;
+    color: red;
+
+}
